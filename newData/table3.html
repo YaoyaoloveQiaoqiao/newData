@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- 此例子是结合bootstrap的Datatables，暂且定位为最基本的例子吧 -->
+  <!-- 引入必须的css和js文件 -->
+  <link rel="stylesheet" type="text/css" href="DataTables-1.10.13/media/css/jquery.dataTables.css">
+   
+  <!-- jQuery -->
+  <script type="text/javascript" charset="utf8" src="DataTables-1.10.13/media/js/jquery.js"></script>
+
+  <!-- DataTables -->
+  <script type="text/javascript" charset="utf8" src="DataTables-1.10.13/media/js/jquery.dataTables.js"></script>
+  <!-- HTML代码片段中请勿添加<body>标签 //-t src="http://cdn.gbtags.com/datatables/1.10.5/js/jquery.js"></script> 
+  <script src="http://cdn.gbtags.com/datatables/1.10.5/js/jquery.dataTables.min.js"></script> 
+  <script type="text/javascript" language="javascript" src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js"></script> 
+  <!-- HTML代码片段中请勿添加<body>标签 //--> 
+  <script type="text/javascript">
+    
+
+    $(document).ready(function() {
+
+        $('#example').DataTable( {
+
+            "ajax":"objects.txt",
+
+           // "data":"db2alertdetail"
+           "columns": [
+            { "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "extn" },
+            { "data": "start_date" },
+            { "data": "salary" }
+          ]
+
+        } );
+
+   } );
+  </script>
+  </head>
+  
+  
+<table width="100%" class="display" id="example" cellspacing="0">
+
+        <thead>
+
+            <tr>
+
+                <th>Name</th>
+
+                <th>Position</th>
+
+                <th>Office</th>
+
+                <th>Extn.</th>
+
+                <th>Start date</th>
+
+                <th>Salary</th>
+               
+            </tr>
+
+        </thead>
+
+
+    </table>
+</html>
